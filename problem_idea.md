@@ -10,3 +10,7 @@ J'ai lu un article wikipedia sur les intersection graphs où on passe de la géo
 En mode il y a des nations qui sont représentés par des cercles, si jamais deux nations s'overlapent alors on fait un truc genre la nation A est énemie avec la Nation B
 Si on ajoute une notation d'amis / énemis alors ça veut dire qu'on peut colorier notre graphe en 2 couleures et que faire avec ? maybe trop compliqué pour le karwa ? 
 Ajouter Un concepte d'ordre d'amitié ? Ou bien un groupe resteint ?
+
+# gardes 
+
+En gros notre personnage est dans un labyrinthe et il doit sortir du labyrinthe sauf qu'il y a K gardes qui font des rondes. il faut dire si c'est possible de s'échapper.
