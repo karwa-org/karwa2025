@@ -12,5 +12,8 @@ Si on ajoute une notation d'amis / énemis alors ça veut dire qu'on peut colori
 Ajouter Un concepte d'ordre d'amitié ? Ou bien un groupe resteint ?
 
 # gardes 
-
 En gros notre personnage est dans un labyrinthe et il doit sortir du labyrinthe sauf qu'il y a K gardes qui font des rondes. il faut dire si c'est possible de s'échapper.
+
+# Post facebook 
+je suis tombé sur un post facebook https://www.facebook.com/share/p/PPofCQ2MS2UL2Uc8/ et en vrais il y a moyen de faire un problème avec un graphe et des queries en mode je possède un rein, j'ai 10k euro j'ai 5 pieds et on veut savoir c'est quoi le résultat si on suit le graphe.
+
