@@ -17,3 +17,9 @@ En gros notre personnage est dans un labyrinthe et il doit sortir du labyrinthe 
 # Post facebook 
 je suis tombé sur un post facebook https://www.facebook.com/share/p/PPofCQ2MS2UL2Uc8/ et en vrais il y a moyen de faire un problème avec un graphe et des queries en mode je possède un rein, j'ai 10k euro j'ai 5 pieds et on veut savoir c'est quoi le résultat si on suit le graphe.
 
+# Coprime
+Un truc tout con, on donne un intervale A et B, il faut trouver deux nombres qui sont co-prime. À prover mais à priori ça devrait simplemet ^etre a et a+1.
+
+# Anniversaire
+
+En gros Aymeric a eu une superbe idée on a des sets de mots par exemple "abc", "pomme", "poire", "fraise" et le but c'est de savoir le nombre minimum de set de mots pour pouvoir former un autre mot par exemple combien de set je dois choisir si je veux former "alexis".
