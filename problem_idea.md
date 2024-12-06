@@ -23,3 +23,5 @@ Un truc tout con, on donne un intervale A et B, il faut trouver deux nombres qui
 # Anniversaire
 
 En gros Aymeric a eu une superbe idée on a des sets de mots par exemple "abc", "pomme", "poire", "fraise" et le but c'est de savoir le nombre minimum de set de mots pour pouvoir former un autre mot par exemple combien de set je dois choisir si je veux former "alexis".
+
+# MIS dans un arbre ?
