@@ -1,6 +1,6 @@
 /*
  * Solution en O(q * log(n) + n log(n)) with c++ upper_bound
- * @EXPECTED_RESULTS@: CORRECT
+ * @EXPECTED_RESULTS@: WRONG_ANSWER
  */
 
 #include <stdio.h>
