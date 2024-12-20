@@ -2,12 +2,6 @@
 
 Problemset for the third edition of KARWa.
 
-# Expected problem difficulty (from bottom to top)
-## Hard
-## Medium
-- Wifi
-## Easy
-
 # New Karwa Scoring system
 Each problem has subtasks, When a player submit a solution the score of the user will be the sum of the subtaks score. If the new score is lower than the previous score, then the user keep it's original score.
 
@@ -18,6 +12,15 @@ For the scoreboard here is the rules:
 3) If penalties are equals then we are unlucky :(.
 
 This uses [Ragnar's awesome BAPCtools scripts](https://github.com/RagnarGrootKoerkamp/BAPCtools).
+
+## Problem expected difficulty (from bottom to top)
+### Hard
+
+### Medium
+- Wifi
+
+### Easy
+
 
 ## Building problemset
 
