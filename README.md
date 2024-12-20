@@ -2,6 +2,12 @@
 
 Problemset for the third edition of KARWa.
 
+# Expected problem difficulty (from bottom to top)
+## Hard
+## Medium
+- Wifi
+## Easy
+
 # New Karwa Scoring system
 Each problem has subtasks, When a player submit a solution the score of the user will be the sum of the subtaks score. If the new score is lower than the previous score, then the user keep it's original score.
 
