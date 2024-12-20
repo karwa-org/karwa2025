@@ -1,5 +1,7 @@
-import bisect
-
+#
+# Solution en O(q * log(n) + n log(n)) with binary search
+# @EXPECTED_RESULTS@: CORRECT
+#
 def take_closest(values, target):
     left = 0
     right = len(values) - 1
