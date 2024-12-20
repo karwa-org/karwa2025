@@ -1,4 +1,4 @@
 name: sample
 grading:
-  score: 1
+  score: 0
   aggregation: sum
