@@ -1,0 +1,48 @@
+\problemname{Wifi}
+
+\newenvironment{Testgroup}{
+	\subsection*{Score}
+}{\par}
+
+
+\illustration{0.3}{vecteezy_wifi-icon-vector_.jpg}{
+
+    CC BY-SA 4.0 by nemanja on \href{https://www.vecteezy.com/vector-art/4849448-wifi-icon-vector}{vecteezy}
+}
+
+\newcommand{\maxa}{123456789}
+
+En tant qu'opérateur téléphonique vous devez êtres les plus performant et battre vos adversaires Koodo, Airtel, Rogers, Wind et AT\&T. Pour ce faire il faut que votre réseaux téléphonique soit le plus rapide possible. Votre réseau est composé de nombreuses antennes réparties sur un territoire. Lorsqu’un client souhaite se connecter à Internet, il est impératif de lui assigner l’antenne la plus proche pour garantir une connexion rapide et efficace. Par soucis d'éfficacitée, toutes les antennes sont allignés sur un seul axe.
+
+c'est votre devoir d'assigner les antennes au client !.
+
+\begin{Input}
+    l'entrée consiste en:
+    \begin{itemize}
+        \item Une ligne avec deux entiers $n, q$ ($0\leq n, q\leq 2 \cdot 10^5$), la taille de la liste ainsi que le nombre de requêtes.
+        \item Une ligne avec $n$ entiers $a_i$ ($0  \leq a_i \leq 10^{18}$), la position des antennes.
+        \item $q$ lignes avec un entier $p$ ($0 \leq p \leq 10^{18}$). La position du client.
+    \end{itemize}
+\end{Input}
+
+\begin{Testgroup}
+    Votre solution sera testée sur un ensemble de groupe de test, chacun valant un certain nombre de points. Chaque groupe de test contient un ensemble de test. Pour obtenir les points d'un groupe, vous devez résoudre tous les tests du groupe.
+
+    {\par}
+
+    \renewcommand{\arraystretch}{1.6} % Adjust row height
+    \begin{table}[h!]
+        \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Groupe} & \textbf{Score} & \textbf{Contraintes} \\ \hline
+        1 & 10 & \( n,q \leq 10^3 \) \\ \hline
+        2 & 20 & \( n,q \leq 10^4 \) \\ \hline
+        3 & 70 & Pas de contraintes\\ \hline
+        \end{tabular}
+    \end{table}
+
+\end{Testgroup}
+
+\begin{Output}
+    L'antenne la plus proche pour chaque requête. Si jamais deux antennes sont à équidistance alors affichez n'importe quelle antenne.
+\end{Output}
