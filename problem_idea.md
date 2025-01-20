@@ -25,3 +25,25 @@ Un truc tout con, on donne un intervale A et B, il faut trouver deux nombres qui
 En gros Aymeric a eu une superbe idée on a des sets de mots par exemple "abc", "pomme", "poire", "fraise" et le but c'est de savoir le nombre minimum de set de mots pour pouvoir former un autre mot par exemple combien de set je dois choisir si je veux former "alexis".
 
 # MIS dans un arbre ?
+
+
+
+# Le jeu des miroires
+En gros on a des miroir qui réflechissent un faiseaux de lumière et il faut dire si il éxiste un chemin d'un miroir A à un miroir B et si oui quelle est la distance minimale que le lazer doit parcourir
+
+Possible idée de solution -> Le problème se réduit à un plus court chemin si on a le graphe avec chaque miroir comme noeuds et les  edges c'est pour dire que le lazer va du miroir A vas vers B.
+
+Sauf que dans le problème on donne que la position du miroir et son angle (par rapport à un point de repère). 
+
+Donc la première chose c'est de trouver un moyen de construire le graphe de manière intelligente donc éviter de tout simuler. Pour faire ça je pense qu'il y a moyen de faire ça avec un sweep line mais pas encore sur sur 
+
+Pour simplifier le problème on peut supposer que les miroirs sont des points et qu'ils ont un angle entier.
+
+Ducoup avec ça la solution pour construire le graphe en n² est trop lente.
+L'observation ici c'est que le miroir A redirige vers le miroir B si le miroir B est alligné au vecteur direction du miroir A.
+
+Le problème pour 1 direction donné est très simple il suffit de faire un sweepline.
+
+Ducoups ce qu'on peut faire c'est tester toutes les directions possibles, étant donné qu'il y en a que 360 possibles alors on vas faire 360 sweepline mdr.
+
+Une fois le graphe fait -> plus court chemin.
