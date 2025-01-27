@@ -1,10 +1,20 @@
 \begin{frame}
     \frametitle{\problemtitle}
-    \begin{itemize}
-        % TODO: Remove this comment when you're done writing the solutions.
-        \item<+-> \textbf{Problem:} Print $4\sqrt n$ with sufficiently many digits.
-        \item<+-> Naive solution: do something stupid. $\mathcal O(2^n)$ is too slow!
-        \item<+-> Instead, just compute the answer. $\mathcal O(1)$.
-    \end{itemize}
+    \begin{block}{Problème}
+        On a une liste des n antennes, trouver la position de l'antenne la plus proche pour chaque query.
+    \end{block}
+    \pause
+    \textbf{Solution Naïve} : Pour chaque query traverser la liste pour trouver quelle antenne est la plus proche.
+    \pause
+     $\mathcal{O}$(n $\times$ q) $\mapsto$ TLE.\\
+     \pause
+     \begin{block}{Solution}
+        \begin{itemize}
+            \item<+-> Trier les antennes.
+            \item<+-> Pour chaque query on lance une binary search (recherche dichotomique) pour trouver l'antenne la plus proche.
+        \end{itemize}
+        \pause
+        \textbf{Complexitée} : $\mathcal{O}(n \log n + q\log n)$
+    \end{block}
     % \solvestats
 \end{frame}
