@@ -1,15 +1,5 @@
 # karwa2025
-
 Problemset for the third edition of KARWa.
-
-# New Karwa Scoring system
-Each problem has subtasks, When a player submit a solution the score of the user will be the sum of the subtaks score. If the new score is lower than the previous score, then the user keep it's original score.
-
-For the scoreboard here is the rules:
-
-1) Sort by score
-2) If two contestant has the same score then Sort these two contestant by the "penalties".
-3) If penalties are equals then we are unlucky :(.
 
 This uses [Ragnar's awesome BAPCtools scripts](https://github.com/RagnarGrootKoerkamp/BAPCtools).
 
@@ -20,7 +10,6 @@ This uses [Ragnar's awesome BAPCtools scripts](https://github.com/RagnarGrootKoe
 
 ### Easy
 - Wifi
-
 
 ## Building problemset
 
