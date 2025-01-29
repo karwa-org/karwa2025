@@ -4,3 +4,9 @@
     en: Wifi
   rgb: '#000000'
   time_limit: 1.0
+- id: second_sino_japanese_war
+  label: B
+  name:
+    en: Second Sino-Japanese War
+  rgb: '#000000'
+  time_limit: 1.0
