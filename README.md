@@ -17,9 +17,9 @@ This uses [Ragnar's awesome BAPCtools scripts](https://github.com/RagnarGrootKoe
 ### Hard
 
 ### Medium
-- Wifi
 
 ### Easy
+- Wifi
 
 
 ## Building problemset
