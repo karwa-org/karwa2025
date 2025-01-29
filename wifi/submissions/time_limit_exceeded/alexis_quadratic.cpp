@@ -1,6 +1,6 @@
 /*
  * Solution en O(n*q)
- * @EXPECTED_RESULTS@: PARTIALLY-ACCEPTED
+ * @EXPECTED_RESULTS@: timelimit
  * Should only pass the first and second  group
  */
 #include <iostream>

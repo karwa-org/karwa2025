@@ -1,6 +1,6 @@
 /*
  * Solution en O((nlogn)*q)
- * @EXPECTED_RESULTS@: PARTIALLY-ACCEPTED
+ * @EXPECTED_RESULTS@: TIMELIMIT
  * Should only pass the first group
  */
 #include <iostream>
