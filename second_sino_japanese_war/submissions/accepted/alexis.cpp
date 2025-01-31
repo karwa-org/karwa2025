@@ -4,23 +4,29 @@ using namespace std;
 
 const int INF = numeric_limits<int>::max()/2;
 
-int girth(vector<vector<int>>& adj, int current, int target, int parent, vector<int>& d) {
+int girth(vector<vector<int>>& adj, int source) {
+    vector<int> d(adj.size(), INF);
+    d[source] = 0;
+    queue<int> q;
+    q.push(source);
 
-    if(parent != -1) d[current] = d[parent] + 1;
+    int shortest_cycle = INF;
 
-    int ans = INF;
-
-    for(auto& v : adj[current]) {
-        if(d[v] != INF){
-            if(v == target &&  current != target) {
-                return d[current]+1;
+    while(!q.empty()){
+        int current = q.front(); q.pop();
+        for(auto& v : adj[current]) {
+            if(v == current) continue;
+            if(d[v] == INF){
+                d[v] = d[current] + 1;
+                q.push(v);
+            }else {
+                shortest_cycle = min(shortest_cycle, d[current] + d[v] + 1);
+                continue;
             }
-            continue;
         }
-        int out = girth(adj, v, target, current, d);
-        ans = min(ans, out);
     }
-    return ans;
+
+    return shortest_cycle;
 }
 
 void solve() {
@@ -36,13 +42,16 @@ void solve() {
     }
 
     int ans = INF;
+    int best_idx = -1;
     for(auto& c : candidates) {
-        vector<int> distances(adj.size(), INF);
-        distances[c] = 0;
-        ans = min(ans, girth(adj, c, c, -1, distances));
+        int g =  girth(adj, c);
+        if (g < ans) {
+            ans = g;
+            best_idx = c;
+        }
     }
 
-    cout << ans << endl;
+    cout << best_idx << endl;
 
 }
 
