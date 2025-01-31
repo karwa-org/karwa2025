@@ -46,17 +46,24 @@ void solve() {
     }
 
     int best_idx = -1;
+    unordered_map<int, vector<int>> all_ans;
+
     for(auto& c : candidates) {
         vector<int> distances(adj.size(), INF);
         distances[c] = 0;
         int g = girth(adj, c, c, -1, distances);
+        all_ans[g].push_back(c);
         if(g < best_solution) {
             best_solution = g;
             best_idx = c;
         }
     }
 
-    cout << best_idx << endl;
+    cout << all_ans[best_solution].size() << endl;
+    for(auto& k : all_ans[best_solution]){
+        cout << k << " ";
+    }
+    cout << endl;
 
 }
 

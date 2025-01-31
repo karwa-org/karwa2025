@@ -16,12 +16,16 @@ int girth(vector<vector<int>>& adj, int source) {
     q.push(source);
 
     int shortest_cycle = INF;
+    vector<int> p(adj.size());
 
     while(!q.empty()){
         int current = q.front(); q.pop();
         for(auto& v : adj[current]) {
-            if(v == current) continue;
+            if(v == p[current]) continue;
+            if(current == v) continue;
+
             if(d[v] == INF){
+                p[v] = current;
                 d[v] = d[current] + 1;
                 q.push(v);
             }else {
@@ -48,15 +52,22 @@ void solve() {
 
     int ans = INF;
     int best_idx = -1;
+    //to remove
+    unordered_map<int, vector<int>> all_ans;
     for(auto& c : candidates) {
         int g =  girth(adj, c);
+        all_ans[g].push_back(c);
         if (g < ans) {
             ans = g;
             best_idx = c;
         }
     }
 
-    cout << best_idx << endl;
+    cout << all_ans[ans].size() << endl;
+    for(auto& k : all_ans[ans]){
+        cout << k << " ";
+    }
+    cout << endl;
 
 }
 

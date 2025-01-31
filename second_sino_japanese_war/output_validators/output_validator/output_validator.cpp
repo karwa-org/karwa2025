@@ -21,31 +21,6 @@ using namespace std;
 
 const int INF = numeric_limits<int>::max()/2;
 
-int girth(vector<vector<int>>& adj, int source) {
-    vector<int> d(adj.size(), INF);
-    d[source] = 0;
-    queue<int> q;
-    q.push(source);
-
-    int shortest_cycle = INF;
-
-    while(!q.empty()){
-        int current = q.front(); q.pop();
-        for(auto& v : adj[current]) {
-            if(v == current) continue;
-            if(d[v] == INF){
-                d[v] = d[current] + 1;
-                q.push(v);
-            }else {
-                shortest_cycle = min(shortest_cycle, d[current] + d[v] + 1);
-                continue;
-            }
-        }
-    }
-
-    return shortest_cycle;
-}
-
 int main(int argc, char *argv[]) {
     // Set up the input and answer streams.
     std::ifstream in(argv[1]);
@@ -67,18 +42,34 @@ int main(int argc, char *argv[]) {
         adj[v].push_back(u);
     }
 
-    int jury_ans; ans >> jury_ans;
-    int contestant_ans = v.read_integer("ans", 0, 10000);
+    int n_jury_sol; ans >> n_jury_sol;
+    int n_contestant_sol = v.read_integer("ans", 0, 10000);
 
-    if (candidates[contestant_ans] != true) {
-        v.WA("The given city is not a candidate city. got :", contestant_ans, " expected :", jury_ans);
+    if(n_jury_sol != n_contestant_sol) {
+        v.WA("The contestant has not the same number of solutions. got :", n_contestant_sol, " Expected: ", n_jury_sol);
     }
 
-    // Check if contestant answer is the best one by computing the girth of the graph :)
-    int contestant_girth = girth(adj, contestant_ans);
-    int jury_girth = girth(adj, jury_ans);
+    vector<int> jury_sols;
+    for(int i = 0; i < n_jury_sol; i++) {
+        int value; ans >> value;
+        jury_sols.push_back(value);
+    }
 
-    if (contestant_girth != jury_girth) {
-        v.WA("The given city is not the best. got :", contestant_ans, " expected : ", jury_ans);
+    vector<int> contestant_sols;
+    for(int i = 0; i < n_contestant_sol; i++){
+        int contestant_city = v.read_integer("city", 0, 10000);
+        if (candidates[contestant_city] != true) {
+            v.WA("The given city is not a candidate city. got :", contestant_city);
+        }
+        contestant_sols.push_back(contestant_city);
+    }
+
+    sort(jury_sols.begin(), jury_sols.end());
+    sort(contestant_sols.begin(), contestant_sols.end());
+
+    for(int i = 0; i < n_jury_sol; i++) {
+        if(jury_sols[i] != contestant_sols[i]) {
+            v.WA("The given city is not part of the best cities. got :", contestant_sols[i]);
+        }
     }
 }

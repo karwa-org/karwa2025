@@ -2,8 +2,10 @@
     \frametitle{\problemtitle}
     \begin{itemize}
         % TODO: Remove this comment when you're done writing the solutions.
-        \item<+-> \textbf{Problem:} Un graphes avec $n$ villes, $m$ villes candidates, et $p$ chemins, il faut trouver la ville candidate qui minimise le nombre de villes à traverser afin de revenir à cette ville candidate.
-        \item<+-> Naive solution: Faire un premier DFS pour trouver toutes les villes candidates, puis un BFS sur chaque ville candidate pour voir si on peut retourner à la ville candidate.
+        \begin{block}{Problème}
+            \textbf{Problem:} Un graphe avec $n$ villes et $m$ villes candidates, Trouver la ville candidate dont le cycle est le plus petit.
+        \end{block}
+        \item<+-> Naive solution: Tester tout les chemins possibles pour chaque ville $\mapsto$ Trop lent.
         \item<+-> DFS en postorder ???
     \end{itemize}
     % \solvestats
