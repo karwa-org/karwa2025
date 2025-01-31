@@ -1,3 +1,8 @@
+/*
+ * Solution en O(m*p) avec un bfs
+ * @EXPECTED_RESULTS@: CORRECT
+ */
+
 #include<bits/stdc++.h>
 
 using namespace std;

@@ -1,11 +1,20 @@
+/*
+ * @EXPECTED_RESULTS@: TIMELIMIT
+ */
 #include<bits/stdc++.h>
 
 using namespace std;
 
 const int INF = numeric_limits<int>::max()/2;
 
+int best_solution = INF;
+
 int girth(vector<vector<int>>& adj, int current, int target, int parent, vector<int> d) {
     int ans = INF;
+    if (d[current] >= best_solution) {
+        return d[current];
+    }
+
     for(auto& v : adj[current]) {
         if(v == current) continue;
         if(d[v] != INF){
@@ -36,14 +45,13 @@ void solve() {
         adj[v].push_back(u);
     }
 
-    int ans = INF;
     int best_idx = -1;
     for(auto& c : candidates) {
         vector<int> distances(adj.size(), INF);
         distances[c] = 0;
         int g = girth(adj, c, c, -1, distances);
-        if(g < ans) {
-            ans = g;
+        if(g < best_solution) {
+            best_solution = g;
             best_idx = c;
         }
     }
@@ -53,6 +61,8 @@ void solve() {
 }
 
 signed main() {
+    cin.tie(0);
+    ios_base::sync_with_stdio(false);
     solve();
     return 0;
 }

@@ -1,5 +1,5 @@
 /*
- * @EXPECTED_RESULTS@: WRONG-ANSWER
+ * @EXPECTED_RESULTS@: TIMELIMIT
  */
 #include<bits/stdc++.h>
 
@@ -7,21 +7,22 @@ using namespace std;
 
 const int INF = numeric_limits<int>::max()/2;
 
-int girth(vector<vector<int>>& adj, int current, int target, int parent, vector<int>& d) {
-
-    if(parent != -1) d[current] = d[parent] + 1;
-
+int girth(vector<vector<int>>& adj, int current, int target, int parent, vector<int> d) {
     int ans = INF;
-
     for(auto& v : adj[current]) {
+        if(v == current) continue;
         if(d[v] != INF){
-            if(v == target &&  current != target) {
+            if(v == target &&  current != target && parent != target) {
                 return d[current]+1;
             }
             continue;
+        }else{
+            d[v] = d[current] + 1;
+            int out = girth(adj, v, target, current, d);
+            d[v] = INF;
+            ans = min(ans, out);
         }
-        int out = girth(adj, v, target, current, d);
-        ans = min(ans, out);
+
     }
     return ans;
 }
@@ -39,13 +40,18 @@ void solve() {
     }
 
     int ans = INF;
+    int best_idx = -1;
     for(auto& c : candidates) {
         vector<int> distances(adj.size(), INF);
         distances[c] = 0;
-        ans = min(ans, girth(adj, c, c, -1, distances));
+        int g = girth(adj, c, c, -1, distances);
+        if(g < ans) {
+            ans = g;
+            best_idx = c;
+        }
     }
 
-    cout << ans << endl;
+    cout << best_idx << endl;
 
 }
 
