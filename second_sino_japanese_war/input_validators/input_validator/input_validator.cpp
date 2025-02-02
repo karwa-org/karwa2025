@@ -1,27 +1,43 @@
 #include "validation.h"
 
-// Check the grammar of the input files.
-// You should also check properties of the input.
-// E.g., check that a graph is connected.
+using namespace std;
 
 int main(int argc, char *argv[]) {
     InputValidator v(argc, argv);
-    int n = v.read_integer("n", 0, 100000);
+    int n = v.read_integer("number_of_cities", 3, 301);
     v.space();
-    float f = v.read_float("f", 0, 100000);
+    int m = v.read_integer("number_of_candidates", 0, 301);
+    v.space();
+    int p = v.read_integer("number_of_edges", 3, (300*(300-1))/2);
     v.newline();
+
+    vector<bool> candidates(n);
+    for(int i = 0; i < m; i++) {
+        int c = v.read_integer("candidate", 0, n-1);
+        if (candidates[c]) {
+            v.WA("Cannot have multiple candidate, they must be unique");
+        }
+        candidates[c] = true;
+        if(i != m-1) v.space();
+    }
+    v.newline();
+
+    vector<vector<int>> adj(n);
+    map<pair<int, int>, bool> cnt;
+    for(int i = 0; i < p; i++) {
+        int u = v.read_integer("u", 0, n-1);
+        v.space();
+        int vv = v.read_integer("v", 0, n-1);
+
+        if(cnt[make_pair(u,vv)] || cnt[make_pair(vv, u)]) {
+            v.WA("The graph must be simple, it is not a multigraph ! for edge: ", u, " and : ", vv);
+        }
+        cnt[make_pair(u, vv)] = true;
+        cnt[make_pair(vv, u)] = true;
+        adj[u].push_back(vv);
+        adj[vv].push_back(u);
+        v.newline();
+    }
+
     return 0;
-
-    // Other useful commands:
-    // read_{float,integer}[s] takes an optional tag:
-    // Unique, Increasing, Decreasing, StrictlyIncreasing, StrictlyDecreasing
-    v.read_integers("v", /*count=*/10, 0, 1000000, Unique);
-    v.test_string("ACCEPTED"); // only succeeds when it reads the given string.
-    v.read_string("s", 4, 5);     // only succeeds when it reads a string with length in inclusive range.
-    bool b = v.peek('x'); // test the next character.
-    v.WA("The input is not valid."); // Print error and exit with code 43.
-    v.check(false, "WA on false");
-
-    // In its destructor, v automatically exits with code 42 here.
-    // TODO: Remove this comment, and summarize your input validator.
 }
