@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
 
     int n_jury_sol; ans >> n_jury_sol;
     int n_contestant_sol = v.read_integer("ans", 0, 10000);
-
+    v.newline();
     if(n_jury_sol != n_contestant_sol) {
         v.WA("The contestant has not the same number of solutions. got :", n_contestant_sol, " Expected: ", n_jury_sol);
     }
@@ -58,12 +58,13 @@ int main(int argc, char *argv[]) {
     vector<int> contestant_sols;
     for(int i = 0; i < n_contestant_sol; i++){
         int contestant_city = v.read_integer("city", 0, 10000);
+        v.space();
         if (candidates[contestant_city] != true) {
             v.WA("The given city is not a candidate city. got :", contestant_city);
         }
         contestant_sols.push_back(contestant_city);
     }
-
+    v.newline();
     sort(jury_sols.begin(), jury_sols.end());
     sort(contestant_sols.begin(), contestant_sols.end());
 
