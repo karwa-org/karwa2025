@@ -1,0 +1,25 @@
+problem_format_version: 2023-07-draft
+name:
+  #lang: name
+  en: Victor Fairon
+author: Victor Fairon
+# Contest name and year
+source: karwa2025
+# contest.region.eu
+source_url: 
+uuid: 8ee7605a-6321-8bf2-04ed-90ed137a392e
+license: cc by-sa
+rights_owner: author
+# 'default', 'custom', or 'custom interactive'
+validation: default
+
+# One or more of:
+# case_sensitive
+# space_change_sensitive
+# float_absolute_tolerance eps
+# float_relative_tolerance eps
+# float_tolerance eps
+#validator_flags:
+
+# limits:
+#   time_limit: 1.0
