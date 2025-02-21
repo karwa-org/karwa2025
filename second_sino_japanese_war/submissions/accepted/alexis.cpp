@@ -20,6 +20,7 @@ int girth(vector<vector<int>>& adj, int source) {
 
     while(!q.empty()){
         int current = q.front(); q.pop();
+        bool found_cycle = false;
         for(auto& v : adj[current]) {
             if(v == p[current]) continue;
             if(current == v) continue;
@@ -29,9 +30,34 @@ int girth(vector<vector<int>>& adj, int source) {
                 d[v] = d[current] + 1;
                 q.push(v);
             }else {
+                // Check if unique path otherwise it is not a cycle that contains c
+                //from current & from v 
+                int current_node = current;
+                unordered_map<int, bool> path;
+                while(current_node != source) {
+                    path[current_node] = true;
+                    current_node = p[current_node];
+                }
+
+                bool is_distinct_path = true;
+                current_node = v;
+                while(current_node != source) {
+                    if (path[current_node]) { // it is not a distinct path
+                        is_distinct_path = false;
+                        break;
+                    }
+                    current_node = p[current_node];
+                }
+                if (!is_distinct_path) {
+                    continue;
+                }
                 shortest_cycle = min(shortest_cycle, d[current] + d[v] + 1);
+                found_cycle = true;
                 continue;
             }
+        }
+        if (found_cycle) {
+            return shortest_cycle;
         }
     }
 
@@ -42,10 +68,13 @@ void solve() {
     int n, m, p; cin >> n >> m >> p;
     vector<vector<int>> adj(n);
     vector<int> candidates(m);
+    vector<int> degree(n);
     for(auto& i : candidates) cin >> i;
 
     for(int i = 0; i < p; i++) {
         int u, v; cin >> u >> v;
+        degree[u]++;
+        degree[v]++;
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
@@ -55,6 +84,7 @@ void solve() {
     //to remove
     unordered_map<int, vector<int>> all_ans;
     for(auto& c : candidates) {
+        if(degree[c] <= 1) continue;
         int g =  girth(adj, c);
         all_ans[g].push_back(c);
         if (g < ans) {
