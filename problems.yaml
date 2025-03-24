@@ -10,3 +10,8 @@
     en: Second Sino-Japanese War
   rgb: '#000000'
   time_limit: 1.0
+- id: star
+  label: C
+  name: star
+  rgb: '#000000'
+  time_limit: 1.0
