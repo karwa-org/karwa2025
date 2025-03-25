@@ -15,3 +15,9 @@
   name: star
   rgb: '#000000'
   time_limit: 1.0
+
+- id: fibofish
+  label: F
+  name: FiboFish
+  rgb: '#000000'
+  time_limit: 1.0
