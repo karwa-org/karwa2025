@@ -1,0 +1,17 @@
+# Specification: https://icpc.io/problem-package-format/spec/2023-07-draft.html
+problem_format_version: 2023-07-draft
+# 'pass-fail', 'interactive', 'multi-pass', or 'interactive multi-pass'
+type: pass-fail
+name:
+  #lang: name
+  fr: Caverne
+uuid: 8ee7605a-1d1a-8082-3a1a-d51bb76756d6
+credits: Shinke
+source:
+  name: karwa2025
+  #url:
+license: cc by-sa
+rights_owner: author
+
+# limits:
+#   time_limit: 1.0

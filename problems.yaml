@@ -21,3 +21,8 @@
   name: FiboFish
   rgb: '#000000'
   time_limit: 1.0
+- id: caverne
+  label: G
+  name: Cavern
+  rgb: '#000000'
+  time_limit: 1.0
