@@ -1,0 +1,1 @@
+print(int(((2*int(input())-1)**.5-1)/2)) # f(x)=2x^2+2x+1; so x = (sqrt(2f(x)-1)-1)/2
