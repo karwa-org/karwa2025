@@ -1,0 +1,8 @@
+*.nix
+/.envrc
+/BAPCtools/
+/bt.sh
+contest*.pdf
+solutions*.pdf
+*/problem.*.pdf
+*/*.zip
