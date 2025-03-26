@@ -5,18 +5,18 @@
 %    CC BY-SA 4.0 by X on \href{https://example.com/reference-to-image}{Y}
 %}
 
-% optionally define variables/limits for this problem
-\newcommand{\maxa}{123456789}
-
-% TODO: Remove this comment when you're done writing the problem statement.
-Dans le monde des Kiwis Arrangés Régulièrement Wallons et Agressifs, les kiwis sont très soucieux de leur consommation d'énergie et cherchent à optimiser tout ce qui est optimisable. Les postiers de ce monde ont donc horreur de devoir repasser deux fois par la même rue lors de leur tournée. Votre travail est donc de les rassurer en leur affirmant si oui ou non, il est possible d'avoir un chemin parfait. On ne vous demandera de ne regarder que les rues accessibles depuis votre point de départ. De plus, les kiwis n'aiment pas les sens uniques et donc toutes les rues sont empruntables dans les deux sens. \\
+Dans le monde des Kiwis Arrangés Régulièrement Wallons et Agressifs, les kiwis sont très soucieux de leur consommation d'énergie et cherchent à optimiser tout ce qui est optimisable. Les postiers de ce monde ont donc horreur de devoir repasser deux fois par la même rue lors de leur tournée. Votre travail est donc de les rassurer en leur affirmant si oui ou non, il est possible d'avoir un chemin parfait. On ne vous demandera de ne regarder que les rues accessibles depuis votre point de départ. De plus, les kiwis n'aiment pas les sens uniques et donc toutes les rues sont empruntables dans les deux sens. De plus, un carrefour ne peut pas être relié à lui même.\\
 Pour ce faire, la ville vous fournit son plan de la façon suivante :
+
+
 \begin{itemize}
 \item les carrefours numméroté de 0 à $c-1$ où $c$ est le nombre de carrefours dans la ville
 \item les rues reliant deux carrefours (attention, plusieurs routes peuvent relier deux même carrefours)
 \end{itemize}
 Les kiwis étant des animaux peu conscient de leur propre bêtise, il est possible qu'un carrefour soit relié à $0$, $1$ ou $2$ rues, ce qui n'est pas vraiment considéré comme un carrefour dans notre monde.
 Le trajet entre le point de départ de la tournée et le bureau de poste n'est pas comptabilisé. 
+
+
 \begin{Input}
     The input consists of:
     \begin{itemize}
