@@ -26,3 +26,8 @@
   name: Cavern
   rgb: '#000000'
   time_limit: 1.0
+- id: lettre
+  label: H
+  name: lettre
+  rgb: '#000000'
+  time_limit: 1.0
