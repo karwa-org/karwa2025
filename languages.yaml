@@ -266,7 +266,7 @@ cpython2:
 cpython3:
     name: 'CPython 3'
     priority: 801
-    files: '*.py3'
+    files: '*.py *.py3'
     compile: 'python3 -m py_compile {files}'
     run: 'python3 {mainfile}'
 
