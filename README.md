@@ -5,11 +5,12 @@ This uses [Ragnar's awesome BAPCtools scripts](https://github.com/RagnarGrootKoe
 
 ## Problem expected difficulty (from bottom to top)
 ### Hard
-
+- Elexir
 ### Medium
 - War
 ### Easy
 - Wifi
+- Caverne
 - Star
 ## Building problemset
 

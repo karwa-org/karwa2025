@@ -5,25 +5,22 @@
 %    CC BY-SA 4.0 by X on \href{https://example.com/reference-to-image}{Y}
 %}
 
-% optionally define variables/limits for this problem
-\newcommand{\maxa}{123456789}
-
 % TODO: Remove this comment when you're done writing the problem statement.
-Vous êtes un spéléologue et votre métier est d'étudier les Kryptes Antique Resultant de Wombats Archaïques. Le but de votre travail est d'estimer le volume libre dans les ces cavernes mystérieuses afin de les innonder pour créer des nappes phréatiques et y stocker de l'eau ! Pour cela vous possédez un relevé topographique du sol et du plafond. Ces données vous viennent sous cette formes :
+Vous êtes un spéléologue et votre métier est d'étudier les Kryptes Antiques Resultant de Wombats Archaïques (KARWA). Le but de votre travail est d'estimer le volume libre dans ces cavernes mystérieuses afin de les inonder pour créer des nappes phréatiques et y stocker de l'eau ! Pour cela, vous possédez un relevé topographique du sol et du plafond. Ces données vous viennent sous cette forme :
 \begin{itemize}
-\item Trois entier $h$, $l$ et $p$ représentant la hauteur, longueur et profondeur d'un paraléllépipède rectangle représentant la zone scannée.
-\item Une matrice de taille $l\times p$ représentant la topographie du plafond, chaque entrée coefficient étant la hauteur du plafond en partant du haut du paraléllépipède de $1m^2$.
-\item Une matrice de taille $l\times p$ représentant la topographie du plancher, chaque entrée coefficient étant la hauteur du sol en partant du haut du paraléllépipède de $1m^2$.
+\item Trois entiers $h$, $l$ et $p$ représentant la hauteur, la longueur et la profondeur d'un parallélépipède rectangle représentant la zone scannée.
+\item Une matrice de taille $l\times p$ représentant la topographie du plafond, chaque entrée coefficient étant la hauteur du plafond en partant du haut du parallélépipède de $1m^2$.
+\item Une matrice de taille $l\times p$ représentant la topographie du sol, chaque entrée coefficient étant la hauteur du sol en partant du haut du parallélépipède de $1m^2$.
 \end{itemize}
 
-On considère que si la hauteur du plafond et celle du plancher sur le même mètre carré se croisent (autrement dit, leur somme est plus grande que la hauteur du paraléllépipède) alors la caverne forme un pilier et ne peut donc pas accueillir d'eau à cet endroit.
+On considère que si la hauteur du plafond et celle du sol sur le même mètre carré se croisent (autrement dit, leur somme est plus grande que la hauteur du parallélépipède) alors la caverne forme un pilier et ne peut donc pas accueillir d'eau à cet endroit.
 
 \begin{Input}
-    The input consists of:
+    L'input consiste en :
     \begin{itemize}
-        \item Une ligne avec les trois coefficients $1 \leq h, l, p \leq 10^3$.
-        \item $l$ lignes pour la matrice représentant le plafond avec comme coefficients compris entre $0$ et $h$.
-        \item $l$ lignes pour la matrice représentant le plancher avec comme coefficients compris entre $0$ et $h$.
+        \item Une ligne avec les trois entiers $1 \leq h, l, p \leq 10^3$.
+        \item $l$ lignes, chacune contenant $p$ entiers entre $0$ et $h$, pour la matrice représentant la topographie du plafond.
+        \item $l$ lignes, chacune contenant $p$ entiers entre $0$ et $h$, pour la matrice représentant la topographie du sol.
     \end{itemize}
 \end{Input}
 

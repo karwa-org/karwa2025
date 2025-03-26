@@ -1,0 +1,14 @@
+\begin{frame}
+    \frametitle{\problemtitle}
+    \begin{block}{Problème}
+        Déterminer le nombre d'ensembles de naturels dont la somme vaut $S$ et le produit $P$.
+    \end{block}
+    \pause
+    \begin{itemize}[<+->]
+        \item Dans le pire des cas pour $S$, c'est-à-dire $S=42$, il y a        53174 ensemble de naturels différents sommant à $S$. \item<+-> Pour construire les possibilités pour $S$, on peut utiliser les ensembles de naturels sommant à $S-1$ et leur ajouter 1, puis on utilise les ensembles de naturels sommant à $S-2$ et on leur ajoute 2, etc.
+        \item Attention de ne pas générer des doublons.
+        \item Il est alors facile de vérifier combien de ces possibilités ont conduisent à un produit $P$.
+    \end{itemize}
+
+    %\pause\solvestats
+\end{frame}
