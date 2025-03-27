@@ -5,24 +5,23 @@
 %    CC BY-SA 4.0 by X on \href{https://example.com/reference-to-image}{Y}
 %}
 
-Dans le monde des Kiwis Arrangés Régulièrement Wallons et Agressifs (KARWA), les kiwis sont très soucieux de leur consommation d'énergie et cherchent à optimiser tout ce qui est optimisable. Les postiers de ce monde ont donc horreur de devoir repasser deux fois par la même rue lors de leur tournée. Votre travail est donc de les rassurer en leur affirmant si oui ou non, il est possible d'avoir un chemin parfait. On ne vous demandera de ne regarder que les rues accessibles depuis votre point de départ. De plus, les kiwis n'aiment pas les sens uniques et donc toutes les rues sont empruntables dans les deux sens. De plus, un carrefour ne peut pas être relié à lui-même.\\
-Pour ce faire, la ville vous fournit son plan de la façon suivante :
+Dans le monde des Kiwis Arrangés Régulièrement Wallons et Agressifs (KARWA), les kiwis sont très soucieux de leur consommation d'énergie et cherchent à optimiser tout ce qui est optimisable. Les postiers de ce monde ont donc horreur de devoir repasser deux fois par la même rue lors de leur tournée. Votre travail est donc de les rassurer en leur affirmant si oui ou non, il est possible d'avoir un chemin parfait.
 
+La ville est un amat de $c$ carrefours reliés par $r$ rues. Chaque carrefour est numéroté de $0$ à $c-1$. Vous connaissez le carrefour $d$ où se trouve le bureau de poste.
 
-\begin{itemize}
-\item les carrefours numméroté de 0 à $c-1$ où $c$ est le nombre de carrefours dans la ville
-\item les rues reliant deux carrefours (attention, plusieurs routes peuvent relier deux mêmes carrefours)
-\end{itemize}
+Un chemin parfait commence à un carrefour atteignable depuis le bureau de poste, et se finit à un carrefour (pas forcément le même), en ayant emprunté chaque rue une et une seule fois, peu importe le sens. Votre rôle est de choisir un point de départ, accessible depuis le bureau de poste, avant de commencer le trajet. Le trajet entre le point de départ de la tournée et le bureau de poste n'est pas comptabilisé.
+
+En effet, les kiwis n'aiment pas les sens uniques et donc toutes les rues sont empruntables dans les deux sens. De plus, un carrefour ne peut pas être relié à lui-même mais plusieurs rues peuvent relier deux mêmes carrefours.
+
 Les kiwis étant des animaux peu conscients de leur propre bêtise, il est possible qu'un carrefour soit relié à $0$, $1$ ou $2$ rues, ce qui n'est pas vraiment considéré comme un carrefour dans notre monde.
-Le trajet entre le point de départ de la tournée et le bureau de poste n'est pas comptabilisé. 
 
 \begin{Input}
-    L'input consiste en :
+    L'entrée consiste en :
     \begin{itemize}
-        \item Une ligne contenant l'entier $1 \leq c \leq n$ correspondant au nombre total de carrefours dans la ville où vous travaillez.
-        \item Un entier $0\leq d \leq c$ le carrefour où se trouve votre bureau de poste.
-        \item Une ligne contenant l'entier $0 \leq r \leq n$ correspondant au nombre de rues.
-        \item $r$ lignes contenant deux entiers $0\leq a,b < c$ reliant les carrefours $a$ et $b$.
+        \item une ligne contenant l'entier $1 \leq c \leq n$, le nombre total de carrefours dans la ville où vous travaillez,
+        \item un ligne contenant l'entier $0\leq d \leq c$, le carrefour où se trouve votre bureau de poste.
+        \item une ligne contenant l'entier $0 \leq r \leq n$, le nombre de rues.
+        \item $r$ lignes contenant deux entiers $0\leq a,b < c$, indiquant qu'une rue relie les carrefours $a$ et $b$.
     \end{itemize}
 \end{Input}
 
