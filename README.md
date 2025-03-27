@@ -8,6 +8,8 @@ This uses [Ragnar's awesome BAPCtools scripts](https://github.com/RagnarGrootKoe
 - Elexir
 ### Medium
 - War
+- Lettre
+- FiboFish
 ### Easy
 - Wifi
 - Caverne
