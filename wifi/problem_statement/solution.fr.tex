@@ -1,13 +1,13 @@
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{block}{Problème}
-        On a une liste $a$ des $n$ antennes, trouver la position de l'antenne la plus proche pour chaque query.
+        On a une liste $a$ de $n$ antennes, trouver la position de l'antenne la plus proche pour chaque query.
     \end{block}
     \pause
     \textbf{Solution Naïve} : Pour chaque query, traverser la liste pour trouver quelle antenne est la plus proche.
     \pause
     $\mathcal{O}$(n $\times$ q) $\mapsto$ TLE.\\
-    \pause
+    \pause \vspace{1em}
     \begin{block}{Solution (Online queries)}
         \begin{itemize}
             \item<+-> Trier les antennes.
@@ -16,7 +16,11 @@
         \pause
         \textbf{Complexité} : $\mathcal{O}(n \log n + q\log n)$
     \end{block}
-    \pause
+\end{frame}
+
+% Solution dégueulasse pour laisser de la place pour le \solvestats
+\begin{frame}
+    \frametitle{\problemtitle}
     \begin{block}{Solution alternative (Offline queries)}
         \begin{itemize}
             \item Trier la liste des antennes et trier les queries.

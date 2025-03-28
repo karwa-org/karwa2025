@@ -1,0 +1,26 @@
+\problemname{\problemyamlname{}}
+
+\illustration{0.3}{vecteezy_exploring-industrial-pipe-systems-underwater-ocean-depths_57834830.jpeg}{
+    From \href{https://www.vecteezy.com/free-photos/pipes}{vecteezy}
+}
+
+Le KARWA (Kanalisation Aquatic Route for Wayward Adventurers) est un réseau complexe de canalisations souterraines conçu pour transporter de l'eau vers l'océan, sous la forme d'une grille $n \times m$. Cependant, il arrive parfois qu'un poisson s'y retrouve coincé !
+
+Aujourd'hui, c'est le jeune Nemo qui s'est égaré dans ce dédale de tuyaux et il a besoin de votre aide pour rejoindre l'océan, mais certaines intersections de tuyaux sont soumises à des courants perturbateurs qui modifient son effort de nage.
+
+Nemo peut se déplacer horizontalement ou verticalement dans le réseau, cela lui prend initialement $1$ minute de nage par unité de distance. Mais lorsqu'il passe dans une intersection perturbatrice, cela l'épuise et augmente d'une minute le temps de parcours de ce tuyau et de tous les suivants.
+
+Nemo connaît sa position initiale $(i_s, j_s)$ et la position de la sortie $(i_t, j_t)$. Il veut y arriver le plus vite possible.
+
+\begin{Input}
+    L'entrée consiste en :
+    \begin{itemize}
+        \item Une ligne contenant deux entiers $n, m$ $(1 \leq n, m \leq 700)$ représentant la taille de la grille de $n$ lignes et $m$ colonnes.
+        \item Une ligne contenant quatre entiers $i_s, j_s, i_t, j_t$ $(1 \leq i_s, i_t < n, 1 \leq j_s, j_t < m)$, les positions de départ $(i_s,j_s)$ et d'arrivée $(i_t,j_t)$,
+        \item $n$ lignes, chacune contenant $m$ caractères qui représentent le type d'intersection : \texttt{+} pour une intersection sans perturbation, \texttt{P} pour une intersection avec perturbation.
+    \end{itemize}
+\end{Input}
+
+\begin{Output}
+    Un entier correspondant au temps minimal pour atteindre la sortie.
+\end{Output}
