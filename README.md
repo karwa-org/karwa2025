@@ -5,10 +5,10 @@ This uses [Ragnar's awesome BAPCtools scripts](https://github.com/RagnarGrootKoe
 
 ## Problem expected difficulty (from bottom to top)
 ### Hard
-- Elixir
+- Élixir
 ### Medium
 - War
-- Évasion Aquatique
+- Déroute Aquatique
 - Artéfacts
 - Lettre
 - FiboFish
@@ -16,6 +16,7 @@ This uses [Ragnar's awesome BAPCtools scripts](https://github.com/RagnarGrootKoe
 - Wifi
 - Caverne
 - Star
+- Artéfact
 ## Building problemset
 
 Assuming you already have BAPCtools installed, simply run:

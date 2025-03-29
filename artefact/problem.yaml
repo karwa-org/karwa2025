@@ -1,0 +1,13 @@
+problem_format_version: 2023-07-draft
+name:
+  fr: Artéfact
+credits: Christophe Grandmont
+type: pass-fail
+source:
+  name: karwa2025
+  url: https://github.com/karwa-org/karwa2025
+license: cc by-sa
+rights_owner: author
+limits:
+  time_limit: 1.5
+uuid: '8ee7605a-e62e-8e15-0cf0-534643fce434'

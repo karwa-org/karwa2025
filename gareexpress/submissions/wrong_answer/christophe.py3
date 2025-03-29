@@ -1,0 +1,1 @@
+print((lambda N,X:-(N+1)%X+(N+1))(int(input()),int(input())))
