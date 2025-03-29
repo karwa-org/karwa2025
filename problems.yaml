@@ -15,7 +15,6 @@
   name: star
   rgb: '#000000'
   time_limit: 1.0
-
 - id: fibofish
   label: F
   name: FiboFish
@@ -29,5 +28,10 @@
 - id: lettre
   label: H
   name: lettre
+  rgb: '#000000'
+  time_limit: 1.0
+- id: elexir
+  label: E
+  name: Elexir
   rgb: '#000000'
   time_limit: 1.0
