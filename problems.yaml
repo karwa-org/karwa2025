@@ -1,6 +1,6 @@
 - id: artefact
   label: A
-  name: Artefact
+  name: Artéfact
   rgb: '#000000'
   time_limit: 1.5
 - id: wifi
