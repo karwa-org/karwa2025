@@ -5,5 +5,5 @@
 contest*.pdf
 solutions*.pdf
 */problem.*.pdf
-*/solutions*.pdf
+*/solution*.pdf
 */*.zip
