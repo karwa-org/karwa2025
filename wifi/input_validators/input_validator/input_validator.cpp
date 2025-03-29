@@ -4,22 +4,22 @@
 int main(int argc, char *argv[]) {
 
     InputValidator v(argc, argv);
-    long long n = v.read_integer("n", 1, 2*(long long)1e5);
+    int n = v.read_integer("nbr_antenna", 1, (int)1e5);
     v.space();
-    long long q = v.read_integer("q", 1, 2*(long long)1e5);
+    int q = v.read_integer("nbr_queries", 1, (int)1e5);
     v.newline();
 
     std::map<int, bool> cnt;
 
-    v.read_integers("a", n, 0, (long long)1e18, Unique); // Already check for newline at the end
+    v.read_integers("antenna_positions", n, 0, (long long)1e18, Unique); // Already check for newline at the end
 
     for(int i = 0; i < q; i++) {
-        long long val = v.read_integer("ai", 0, (long long)1e18);
+        long long val = v.read_integer("query", 0, (long long)1e18);
         if (cnt[val]) {
             std::cerr << "Expected antennes to have a unique position " << std::endl;
             return 43;
         }
         v.newline();
     }
-   return 0;
+    return 0;
 }
