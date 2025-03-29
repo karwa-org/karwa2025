@@ -1,31 +1,16 @@
-- id: wifi
+- id: artefacts
   label: A
-  name: Wifi
+  name: Artefacts
   rgb: '#000000'
   time_limit: 1.0
-- id: secondsinojapanesewar
+- id: wifi
   label: B
-  name: Second Sino-Japanese War
-  rgb: '#000000'
-  time_limit: 1.0
-- id: star
-  label: G
-  name: Star
-  rgb: '#000000'
-  time_limit: 1.0
-- id: fibofish
-  label: F
-  name: FiboFish
+  name: Wifi
   rgb: '#000000'
   time_limit: 1.0
 - id: caverne
   label: C
   name: Caverne
-  rgb: '#000000'
-  time_limit: 1.0
-- id: lettre
-  label: H
-  name: Lettre
   rgb: '#000000'
   time_limit: 1.0
 - id: elexir
@@ -38,3 +23,23 @@
   name: Évasion Aquatique
   rgb: '#000000'
   time_limit: 3.0
+- id: fibofish
+  label: F
+  name: FiboFish
+  rgb: '#000000'
+  time_limit: 1.0
+- id: secondsinojapanesewar
+  label: G
+  name: Second Sino-Japanese War
+  rgb: '#000000'
+  time_limit: 1.0
+- id: star
+  label: H
+  name: Star
+  rgb: '#000000'
+  time_limit: 1.0
+- id: lettre
+  label: I
+  name: Lettre
+  rgb: '#000000'
+  time_limit: 1.0
