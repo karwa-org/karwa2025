@@ -7,7 +7,7 @@
     \begin{itemize}[<+->]
         \item Observation : si $F_i$ et $F_{i+1}$ sont sélectionnés, alors on peut prendre $F_{i+2}$, et on améliore le résultat ($i+2 \leq 2i+1$ est vrai quand $i \geq 1$).
         \item Solution greedy fonctionnelle : on prend le plus grand $F_\alpha \leq N$, puis on répète avec $N - F_{\alpha}$, et ainsi de suite, avant d'afficher la somme des indices choisis.
-        \item Problème : c'est peut-être long de calculer le plus grand $F_\alpha$, car $N \leq 10^{18}$. Heureusement, $\log_{\varphi}(10^{18}) \approx 86.13$ (où $\varphi$ est le nombre d'or), on ne dépasse donc jamais $F_{86}$ !
+        \item Problème : c'est peut-être long de calculer le plus grand $F_\alpha$, car $N \leq 10^{18}$. Heureusement, $\log_{\varphi}(10^{18}) \approx 86.13$ (où $\varphi \approx 1.618$ est le nombre d'or), on ne dépasse donc jamais $F_{86}$ !
         \item On peut pré-calculer dans une liste les $86$ premiers nombres et lancer notre algorithme greedy. Complexité totale : $\mathcal{O}(\log_{\varphi}(n))$.
     \end{itemize}
 
