@@ -1,0 +1,30 @@
+\problemname{\problemyamlname{}}
+
+%\illustration{0.3}{}{}
+
+Dans le lointain royaume de Karwalia, les r\'ecoltes d\'ep\'erissent et le ciel s'assombrit chaque jour un peu plus. Le Karwachimiste royal, dernier espoir de la contr\'ee, a mis la main sur un manuscrit ancien: le c\'el\`ebre \emph{Codex Karwamique}. Selon cet ouvrage, il existerait un rem\`ede unique: le \emph{Karwa-\'Elixir}.
+Pour pr\'eparer cet \'elixir, il faut constituer une \emph{Karwa-collection} d'entiers dont:
+\begin{enumerate}
+    \item La somme soit \'egale \`a une valeur mystique \(S\).
+    \item Le produit soit \'egal \`a un nombre arcanique \(P\).
+\end{enumerate}
+
+Cependant, personne ne sait combien de \emph{Karwa-collections} diff\'erentes permettent de r\'eunir ces deux conditions simultan\'ement. Seule la connaissance de ce nombre permettrait au Karwakcimiste de choisir pr\'ecis\'ement les ingr\'edients n\'ecessaires pour brasser l'\'elixir salvateur.
+\textbf{Votre mission est de calculer combien de collections distinctes d'entiers satisfont les deux conditions.}
+Si vous parvenez \`a d\'eterminer ce nombre, vous sauverez Karwalia de la ruine imminente (et gagnerez peut-\^etre les faveurs du roi qui vous d\'ecernera le l\'egendaire \emph{Karwa-Troph\'ee}).
+
+Dans le premier exemple ci-dessous, il y a quatre possibilités :
+\begin{itemize}
+    \item $2, 3, 1, 2, 2$
+    \item $4, 6$
+    \item $4, 3, 1, 2$
+    \item $6, 2, 2$
+\end{itemize}
+
+\begin{Input}
+    L'entrée consiste en une ligne avec deux entiers $S$ et $P$ séparés par un espace ($1\le S \le 42$, $1\le P \le 10^9$).
+\end{Input}
+
+\begin{Output}
+    Un entier représentant le nombre de possibilités différentes qu'un ensemble de naturels somment à $S$ et dont le produit vaut $P$ (l'ordre de ces naturels n'importe évidemment pas). %Si ce n'est pas possible, écrivez $-1$.
+\end{Output}

@@ -13,9 +13,9 @@
   name: Caverne
   rgb: '#000000'
   time_limit: 1.0
-- id: elexir
+- id: elixir
   label: D
-  name: Elexir
+  name: Elixir
   rgb: '#000000'
   time_limit: 1.0
 - id: evasionaquatique

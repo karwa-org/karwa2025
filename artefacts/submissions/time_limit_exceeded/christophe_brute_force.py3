@@ -1,6 +1,3 @@
-import sys
-sys.setrecursionlimit(100000)
-
 n = int(input())
 elements = list(map(int, input().split()))
 prefix_sum = [0] * (n+1)

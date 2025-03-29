@@ -4,6 +4,28 @@
 
 todo
 
+Le rituel fonctionne comme suit :
+
+    Il y a $n$ artefacts, chacun avec une valeur énergétique $A_i$.
+
+    Vous pouvez fusionner deux artefacts adjacents pour en créer un nouveau, dont la valeur énergétique est la somme des deux artefacts d'origine.
+
+    Chaque fusion coûte exactement cette somme d'énergie.
+
+    L'objectif est de fusionner tous les artefacts en un seul en minimisant le coût total du rituel.
+
+Exemple
+
+Si on a $4, 3, 2, 6$, voici un exemple de séquence de fusions optimales :
+
+    Fusionner $3$ et $2$ $\rightarrow$ nouveau artéfacts : $4, 5, 6$, coût 5
+
+    Fusionner $4$ et $5$ $\rightarrow$ nouveau artéfacts : $9, 6$, coût 9
+
+    Fusionner $9$ et $6$ $\rightarrow$ un unique artéfact $15$, coût 15
+
+Coût total minimal : $5 + 9 + 15 = 29$.
+
 \begin{Input}
     L'entrée consiste en :
     \begin{itemize}

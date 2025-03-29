@@ -1,20 +1,30 @@
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{block}{Problème}
-        Étant donné une liste de $n$ éléments, on peut fusionner deux éléments adjacents pour un coût égal à la somme des deux éléments. On aimerait fusionner la liste en un seul élément en minimisant le coût nécessaire.
+        Étant donné une liste de $n$ nombres, fusionner la liste en un seul élément en minimisant le coût nécessaire (en fusionnant paire par paire, où le coût d'une fusione est la somme des nombres).
     \end{block}
     \pause
-    \begin{itemize}[<+->]
-        \item Approche naïve 1 : tester toutes les découpes possibles. Complexité exponentielle !
-        \item Approche naïve 2 : on regarde toutes les paires d'éléments $(a_i,a_{i+1})$ et on fusionne la paire dont la somme est minimale, puis on recommence. Ok si deux paires ne sont jamais équivalences, mais en cas d'égalité, un choix doit être fait et tout explorer fait tomber dans l'approche naïve 1.
-        \item Solution : Dynamic Programming ! Pour fusionner les éléments de $i$ à $j$, on trouve le meilleur $k$ qui sépare $[i,j]$ en $[i,k]$ et $[k+1,j]$. On doit ensuite ajouter la somme des éléments entre $i$ et $j$. \\
+    \begin{itemize}
+        \item Approche naïve 1 : tester toutes les découpes possibles. Complexité exponentielle ! \pause
+        \item Approche naïve 2 : chercher la paire $(a_i,a_{i+1})$ qui minimise $a_i+a_{i+1}$. Comment départager les égalités ? On retombe dans l'approche naïve 1.
+    \end{itemize}
+    \pause
+    \begin{block}{Solution : Dynamic Programming (bottom-up)}
+        Pour fusionner les éléments de $i$ à $j$, on trouve le meilleur $k$ qui sépare $[i,j]$ en $[i,k]$ et $[k+1,j]$. On doit ensuite ajouter la somme des éléments entre $i$ et $j$. \\ \pause
         $\rightarrow$ DP[i][j] représente le meilleur coût pour fusionner la liste de $i$ à $j$ :
         \[
-        DP[i][j] = \min_{k}(DP[i][k] + DP[k+1][j] + \texttt{sum}[i][j]).
+        DP[i][j] = \min_{i<k<j}(DP[i][k] + DP[k+1][j] + \texttt{sum}[i][j]).
         \]
-        On peut pré-calculer la somme des éléments entre $i$ et $j$ via la somme des préfixes, puis $\texttt{sum}[i][j]) = \texttt{prefix}[j+1] - \texttt{prefix}[i]$.
-        \item Complexité : $\mathcal{O}(n^3)$.
-    \end{itemize}
+        \pause
+        On peut pré-calculer la somme des éléments entre $i$ et $j$ via la somme des préfixes : $\texttt{sum}[i][j] = \texttt{prefix}[j+1] - \texttt{prefix}[i]$.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{\problemtitle}
+    \begin{block}{Solution similaire : Memo\"isation (top-down)}
+       On définit une fonction récursive \texttt{solve(i,j)} jouant le rôle $DP[i][j]$ et on retient via mémoïsation les paires $(i,j)$ déjà traitées. Il suffit ensuite d'appeler $solve(0,n-1)$.
+    \end{block}
 
     %\pause\solvestats
 \end{frame}

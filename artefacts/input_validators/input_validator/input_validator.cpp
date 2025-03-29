@@ -3,8 +3,8 @@
 
 int main(int argc, char *argv[]) {
     InputValidator v(argc, argv);
-    v.read_integer("length", 1, 3000);
+    int n = v.read_integer("length", 1, 3000);
     v.newline();
-    v.read_integers("elements", n, 1, 3000);
+    v.read_integers("elements", n, 1, (int long)1e9);
     return 0;
 }
