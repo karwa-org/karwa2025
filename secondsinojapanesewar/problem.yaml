@@ -1,0 +1,27 @@
+problem_format_version: 2023-07-draft
+name:
+  fr: Second Sino-Japanese War
+credits: Alessandro Giansante
+type: pass-fail
+source:
+  name: karwa2025
+  url: https://github.com/karwa-org/karwa2025
+license: cc by-sa
+rights_owner: author
+uuid: 8ee7605a-2db1-827c-26ab-6e7cb138ba81
+
+# One or more of:
+# case_sensitive
+# space_change_sensitive
+# float_absolute_tolerance eps
+# float_relative_tolerance eps
+# float_tolerance eps
+#validator_flags:
+
+# To change the time limit factors for problemtools/Kattis, use:
+limits:
+  time_multipliers:
+    # Time limit is 2*slowest accepted submission: (default: 5)
+    ac_to_time_limit: 2
+    # Warning for submissions within 50% of time limit
+    time_limit_to_tle: 1.5

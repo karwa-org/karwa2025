@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(100000)
+
 c = int(input())
 start = int(input())
 n = int(input())

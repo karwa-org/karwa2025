@@ -1,0 +1,13 @@
+\begin{frame}
+    \frametitle{\problemtitle}
+    \begin{itemize}
+        % TODO: Remove this comment when you're done writing the solutions.
+        \begin{block}{Problème}
+            \textbf{Problem:} Un graphe avec $n$ villes et $m$ villes candidates, trouver la ville candidate dont le cycle est le plus petit.
+        \end{block}
+        \item<+-> Solution Naive: Tester tout les chemins possibles pour chaque ville $\mapsto$ Trop lent.
+        \item<+-> \textbf{Observation:} Une boucle peut s'exprimer comme une chemin de A à B et de B à A.
+        \item<+-> \textbf{Solution:} On fait un 0-1 bfs pour chaque ville candidate
+    \end{itemize}
+    % \solvestats
+\end{frame}

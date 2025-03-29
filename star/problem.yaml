@@ -3,13 +3,12 @@ problem_format_version: 2023-07-draft
 # 'pass-fail', 'interactive', 'multi-pass', or 'interactive multi-pass'
 type: pass-fail
 name:
-  #lang: name
   fr: star
 uuid: 8ee7605a-1495-86d0-2ae9-c8292ee4d602
 credits: Alexis Englebert
 source:
   name: karwa2025
-  #url:
+  url: https://github.com/karwa-org/karwa2025
 license: cc by-sa
 rights_owner: author
 

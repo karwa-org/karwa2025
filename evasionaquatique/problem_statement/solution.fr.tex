@@ -1,0 +1,18 @@
+\begin{frame}
+    \frametitle{\problemtitle}
+    \begin{block}{Problème}
+        Trouver le plus court chemin dans un graphe $n \times m$ pondéré par des poids de $1$ ou $4$.
+    \end{block}
+    \pause
+    \textbf{Solution :} Algorithme de Dijkstra.
+    \pause
+    \begin{itemize}[<+->]
+        \item Attention aux erreurs sur les graphes en une ligne ou colonne, et le graphe trivial d'un seul sommet.
+        \item Astuce TLE 1 : calculer les transitions du graphe à la volée pour ne pas les stocker inutilement et ne pas itérer inutilement une fois au début.
+        \item Astuce TLE 2 : transformer les coordonnées 2D $(i,j)$ en coordonnées 1D via, par exemple, la formule $i \times m + j$.
+        \item Astuce TLE 3 : en Python, privilégier quand c'est possible les listes de $n \times m$ éléments plutôt que des \emph{defaultdict}. Très important quand combiné avec le point précédent.
+        \item En Python, ces trois astuces font gagner jusqu'à \textbf{$2.5$ secondes} sur les grandes instances de ce problème !
+    \end{itemize}
+
+    %\pause\solvestats
+\end{frame}

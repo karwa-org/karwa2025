@@ -4,7 +4,7 @@ problem_format_version: 2023-07-draft
 type: pass-fail
 name:
   #lang: name
-  fr: lettre
+  fr: Lettre
 uuid: 8ee7605a-a326-832b-1c48-66c21cb60e61
 credits: Shinke
 source:
@@ -12,6 +12,5 @@ source:
   #url:
 license: cc by-sa
 rights_owner: author
-
 # limits:
 #   time_limit: 1.0

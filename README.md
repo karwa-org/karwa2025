@@ -6,8 +6,10 @@ This uses [Ragnar's awesome BAPCtools scripts](https://github.com/RagnarGrootKoe
 ## Problem expected difficulty (from bottom to top)
 ### Hard
 - Elexir
+- Évasion Aquatique
 ### Medium
 - War
+- Lettre
 - FiboFish
 ### Easy
 - Wifi
