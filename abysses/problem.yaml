@@ -1,0 +1,17 @@
+# Specification: https://icpc.io/problem-package-format/spec/2023-07-draft.html
+problem_format_version: 2023-07-draft
+# 'pass-fail', 'interactive', 'multi-pass', or 'interactive multi-pass'
+type: pass-fail
+name:
+  #lang: name
+  fr: Abysses
+uuid: 8ee7605a-bea5-811e-1cd9-dcc028753cb3
+credits: Alexis Englebert
+source:
+  name: karwa2025
+  #url:
+license: cc by-sa
+rights_owner: author
+
+# limits:
+#   time_limit: 1.0
