@@ -16,5 +16,4 @@ int main(int argc, char *argv[]) {
         // newline is implicit at the end
         v.read_integers("rock_height", p, 0, h);
     }
-    return 0;
 }

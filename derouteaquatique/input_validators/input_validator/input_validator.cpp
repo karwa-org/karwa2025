@@ -21,5 +21,4 @@ int main(int argc, char *argv[]) {
         v.read_string("matrix", m, m, "+P");
         v.newline();
     }
-    return 0;
 }

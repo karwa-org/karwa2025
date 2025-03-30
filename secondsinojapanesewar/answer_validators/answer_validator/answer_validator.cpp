@@ -29,7 +29,6 @@ int main(int argc, char *argv[]) {
         int cycle = v.read_integer("cycle", 0, n);
         if (is_cycle[cycle]) {
             v.WA("Cannot have the same cycle: ", cycle);
-            return 43;
         }
 
         is_cycle[cycle] = true;
@@ -39,5 +38,4 @@ int main(int argc, char *argv[]) {
         }
     }
     v.newline();
-    return 0;
 }

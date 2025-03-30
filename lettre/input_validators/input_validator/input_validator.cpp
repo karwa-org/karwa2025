@@ -17,8 +17,6 @@ int main(int argc, char *argv[]) {
         v.newline();
         //if (a == b) {
         //    v.WA("Invalid input: Loops are forbidden.");
-        //    return 43;
         //}
     }
-    return 0;
 }

@@ -16,10 +16,8 @@ int main(int argc, char *argv[]) {
     for(int i = 0; i < q; i++) {
         long long val = v.read_integer("query", 0, (long long)1e18);
         if (cnt[val]) {
-            std::cerr << "Expected antennes to have a unique position " << std::endl;
-            return 43;
+            v.WA("Expected antennes to have a unique position : " + std::to_string(val) + " is not unique.");
         }
         v.newline();
     }
-    return 0;
 }

@@ -7,5 +7,4 @@ int main(int argc, char *argv[]) {
     v.space();
     v.read_integer("target_product", 1, (int long)1e9);
     v.newline();
-    return 0;
 }
