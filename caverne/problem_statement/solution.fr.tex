@@ -1,10 +1,9 @@
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{itemize}
-        % TODO: Remove this comment when you're done writing the solutions.
-        \item<+-> \textbf{Problem:} Print $4\sqrt n$ with sufficiently many digits.
-        \item<+-> Naive solution: do something stupid. $\mathcal O(2^n)$ is too slow!
-        \item<+-> Instead, just compute the answer. $\mathcal O(1)$.
+        \item<+-> Le volume total du parallélépipède rectangle est $h\times l\times p$
+        \item<+-> Le volume pris par la roche est la somme de chaque matrice, on a donc du $\mathcal{O}(l\cdot p)$.
+        \item<+-> Pour éviter de dépasser la hauteur, il suffit de prendre le maximum entre la hauteur et la somme.
     \end{itemize}
     % \solvestats
 \end{frame}

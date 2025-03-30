@@ -1,10 +1,10 @@
 \begin{frame}
     \frametitle{\problemtitle}
+    La solution demandée était de tester si la composante connexe du bureau de poste est un graphe eulérien
     \begin{itemize}
-        % TODO: Remove this comment when you're done writing the solutions.
-        \item<+-> \textbf{Problem:} Print $4\sqrt n$ with sufficiently many digits.
-        \item<+-> Naive solution: do something stupid. $\mathcal O(2^n)$ is too slow!
-        \item<+-> Instead, just compute the answer. $\mathcal O(1)$.
+        \item<+-> Solution naïve, essayer tous les chemins jusqu'à trouver le bon. C'est trop naif, il faut faire plus fin.
+        \item<+-> Un graphe eulérien possède soit $2$, soit $0$ sommets avec un nombre d'arrêtes impair. 
+        \item<+-> Une solution en $\mathcal{O}(n)$ est donc de précalculer le nombre d'arrête pour chaque sommets, puis effectuer un BFS/DFS et compter le nombre de sommet avec un nombre impair d'arrête.
     \end{itemize}
     % \solvestats
 \end{frame}
