@@ -12,9 +12,10 @@ Vous décidez donc d'en apprendre un peu plus sur cette espèce de poisson, plus
 
 Pour ce faire, vous avez enregistré la position de tous les karwas aux alentours, mais le problème est qu'il y a plusieurs bandes de karwas au même endroit. Votre but est de déterminer combien de karwas font partie d'une bande étant donné un poisson spécifique.
 
-Vous avez remarqué que deux karwas font partie de la même bande si en envoyant de la lumière sur un des karwa, la lumière est réfléchie sur l'autre karwa. Heureusement, vous avez aussi enregistré dans quelle direction chaque karwa réfléchit la lumière. Cette direction est exprimée en degrés et étonnamment, c'est toujours un nombre entier.
+Vous avez remarqué que deux karwas font partie de la même bande si en envoyant de la lumière sur un des karwa, la lumière est réfléchie sur l'autre karwa. De plus il y a une particularitée assez étrange si la lumière passe à moins de 0.0001m (compris) du karwa, la lumière est dévié vers ce karwa.
 
-Lors de votre décompte, une précision de $10^{-5}$ suffira.
+Heureusement, vous avez aussi enregistré dans quelle direction chaque karwa réfléchit la lumière. Cette direction est exprimée en degrés et étonnamment, c'est toujours un nombre entier.
+
 
 \smallskip
 \begin{figure}[h]
@@ -26,7 +27,7 @@ Lors de votre décompte, une précision de $10^{-5}$ suffira.
 \begin{Input}
     L'entrée consiste en :
     \begin{itemize}
-        \item Une ligne avec un entier $n$ ($1 \leq n \leq 10^{5}$), le nombre de poissons.
+        \item Une ligne avec un entier $n$ ($1 \leq n \leq 10^{3}$), le nombre de poissons.
         \item $n$ lignes avec deux nombres \emph{réels} $x, y$ ($0 \leq x,y \leq {10^{7}}$) et un entier d, ($0 \leq d < 360$). Qui sont respectivement l'emplacement du poisson ainsi que la direction dans laquelle ils réfléchissent la lumière.
         \item Une ligne avec un entier $a$ ($0 \leq a < n$) qui est le poisson que vous analysez.
     \end{itemize}

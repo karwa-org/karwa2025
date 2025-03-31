@@ -17,7 +17,7 @@
 using namespace std;
 
 const int INF = numeric_limits<int>::max()/2;
-#define EPSILON 1e-3
+#define EPSILON 1e-4
 
 typedef struct {
     int idx;
@@ -39,8 +39,6 @@ karwa_t rotate_point(karwa_t pt, int deg) {
     return {pt.idx, new_x, new_y, new_deg};
 }
 
-//TODO UN TESTE OÙ ILS POINTENT TOUS DANS LA MÊME DIRECTION ET ILS SONT ALLIGÉS
-//POUR CASSER LE SWEEP LINE A 2 PASS
 void solve() {
     int n; cin >> n;
     vector<karwa_t> karwa(n);
