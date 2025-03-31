@@ -6,7 +6,7 @@
 
 Dans le monde des Kiwis Arrangés Régulièrement Wallons et Agressifs (KARWA), les kiwis sont très soucieux de leur consommation d'énergie et cherchent à optimiser tout ce qui est optimisable. Les postiers de ce monde ont donc horreur de devoir repasser deux fois par la même rue lors de leur tournée. Votre travail est donc de les rassurer en leur affirmant si oui ou non, il est possible d'avoir un chemin parfait.
 
-La ville est un amat de $c$ carrefours reliés par $r$ rues. Chaque carrefour est numéroté de $0$ à $c-1$. Vous connaissez le carrefour $d$ où se trouve le bureau de poste.
+La ville est un amas de $c$ carrefours reliés par $r$ rues. Chaque carrefour est numéroté de $0$ à $c-1$. Vous connaissez le carrefour $d$ où se trouve le bureau de poste.
 
 Un chemin parfait commence à un carrefour atteignable depuis le bureau de poste, et se finit à un carrefour (pas forcément le même), en ayant emprunté chaque rue une et une seule fois, peu importe le sens. Votre rôle est de choisir un point de départ, accessible depuis le bureau de poste, avant de commencer le trajet. Le trajet entre le point de départ de la tournée et le bureau de poste n'est pas comptabilisé.
 
@@ -18,12 +18,12 @@ Les kiwis étant des animaux peu conscients de leur propre bêtise, il est possi
     L'entrée consiste en :
     \begin{itemize}
         \item Une ligne contenant un entier $c$ ($1 \leq c \leq 10^5$), le nombre total de carrefours dans la ville où vous travaillez.
-        \item Un ligne contenant un entier $d$ ($0 \leq d < c$), le carrefour où se trouve votre bureau de poste.
+        \item Une ligne contenant un entier $d$ ($0 \leq d < c$), le carrefour sur lequel se trouve votre bureau de poste.
         \item Une ligne contenant un entier $r$ ($0 \leq r \leq 10^5$), le nombre de rues.
         \item $r$ lignes contenant deux entiers $a$, $b$ ($0 \leq a,b < c$), indiquant qu'une rue relie les carrefours $a$ et $b$.
     \end{itemize}
 \end{Input}
 
 \begin{Output}
-    \emph{Oui} s'il existe un chemin qui passe une et une seule fois par toutes les rues (peu importe la position du bureau de poste, il peut exister un tel chemin sans que le point de départ soit le bureau de poste). \emph{Non} dans le cas contraire
+    \texttt{Oui} s'il existe un chemin qui passe une et une seule fois par toutes les rues (peu importe la position du bureau de poste, il peut exister un tel chemin sans que le point de départ soit le bureau de poste). \texttt{Non} dans le cas contraire
 \end{Output}
