@@ -4,12 +4,13 @@
 }
 
 Un banc est un groupement important de poissons de la même espèce qui se déplacent ensemble, sans hiérarchie. À la différence d'autres structures sociales, il n'existe aucune hiérarchie dans un banc : le poisson qui mène le groupe dans sa nage est simplement celui qui se trouve le plus à l'avant.
-Dans le cadre d'une étude menée en collaboration avec la BBC, nous souhaitons prédire le nombre de bancs de poissons qui atteindront une cible quelques mètres plus loin.
+Dans le cadre d'une étude menée en collaboration avec la BBC, nous souhaitons prédire le nombre de bancs qui atteindront une cible quelques mètres plus loin.
 Pour cela, nous considérons une ligne invisible allant d'un point de départ jusqu'à cette cible et nous analysons comment les poissons se regroupent au fil du temps.
 Chaque poisson possède une vitesse propre, mais lorsqu'un poisson plus rapide rejoint un poisson ou banc plus lent, l'ensemble du groupe adopte la vitesse du poisson devant ceci dit le plus lent.
 Ainsi, la dynamique des bancs évolue en fonction des positions initiales et des vitesses des poissons.
 
 L'objectif est donc d'écrire un programme qui, connaissant les positions initiales, les vitesses et la cible, détermine combien de bancs distincts atteindront la cible.
+
 \begin{Input}
     L'entrée consiste en:
     \begin{itemize}
@@ -22,5 +23,5 @@ L'objectif est donc d'écrire un programme qui, connaissant les positions initia
 \end{Input}
 
 \begin{Output}
-   Le nombre de bancs de poissons distincs atteint à la cible.
+   Le nombre de bancs de poissons distincs atteint à la cible. On considère qu'un poisson seul arrivant à la cible est considéré comme un banc.
 \end{Output}
