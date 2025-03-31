@@ -1,27 +1,34 @@
 #include "validation.h"
+#include <iostream>
+#include <map>
 
-// Check the grammar of the input files.
-// You should also check properties of the input.
-// E.g., check that a graph is connected.
+using namespace std;
 
 int main(int argc, char *argv[]) {
     InputValidator v(argc, argv);
-    int n = v.read_integer("n", 0, 100000);
-    v.space();
-    float f = v.read_float("f", 0, 100000);
+    int n = v.read_integer("n", 0, 1e5);
     v.newline();
+    map<int, bool> unique;
+    int maxi = 0;
+    for(int i = 0; i < n; i++) {
+        int a = v.read_integer("a_i", 0, 1e18);
+        if(i != n-1) v.space();
+        if(unique[a]) {
+            v.WA("The input is not valid not unique positions.");
+        }
+        unique[a] = true;
+        maxi = max(maxi, a);
+    }
+    v.newline();
+    for(int i = 0; i < n; i++) {
+        int a = v.read_integer("v_i", 0, 1e18);
+        if(i != n-1) v.space();
+    }
+    v.newline();
+    int target = v.read_integer("n", 0, 1e18);
+    v.newline();
+    if (target < maxi) {
+        v.WA("The input is not valid target behind fish.");
+    }
     return 0;
-
-    // Other useful commands:
-    // read_{float,integer}[s] takes an optional tag:
-    // Unique, Increasing, Decreasing, StrictlyIncreasing, StrictlyDecreasing
-    v.read_integers("v", /*count=*/10, 0, 1000000, Unique);
-    v.test_string("ACCEPTED"); // only succeeds when it reads the given string.
-    v.read_string("s", 4, 5);     // only succeeds when it reads a string with length in inclusive range.
-    bool b = v.peek('x'); // test the next character.
-    v.WA("The input is not valid."); // Print error and exit with code 43.
-    v.check(false, "WA on false");
-
-    // In its destructor, v automatically exits with code 42 here.
-    // TODO: Remove this comment, and summarize your input validator.
 }
