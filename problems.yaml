@@ -38,9 +38,9 @@
   name: Second Sino-Japanese War
   rgb: '#000000'
   time_limit: 1.0
-- id: star
+- id: etoile
   label: I
-  name: Star
+  name: Étoile
   rgb: '#000000'
   time_limit: 1.0
 - id: lettre
