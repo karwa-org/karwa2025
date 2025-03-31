@@ -48,9 +48,15 @@ void solve() {
     for(int i = 0; i < n-1; i++){
         fish_t ff = a[i+1];
         fish_t bb = a[i];
-
+        
         //check if behind will overpass forward
-        double collision = (ff.pos - bb.pos) / (double)(bb.speed - ff.speed);
+        double collision = -1;
+        if(bb.speed == ff.speed) {
+            collision = INF;
+        }else {
+            collision = (ff.pos - bb.pos) / (double)(bb.speed - ff.speed);
+
+        }
         
         double position = bb.speed * collision + bb.pos;
         double position2 = ff.speed * collision + ff.pos;
