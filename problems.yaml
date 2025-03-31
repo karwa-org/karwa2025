@@ -1,11 +1,11 @@
-- id: artefact
+- id: abysses
   label: A
-  name: Artéfact
+  name: Abysses
   rgb: '#000000'
-  time_limit: 1.5
-- id: wifi
+  time_limit: 1.0
+- id: bancdepoisson
   label: B
-  name: Wifi
+  name: Banc de poisson
   rgb: '#000000'
   time_limit: 1.0
 - id: caverne
@@ -48,13 +48,13 @@
   name: Lettre
   rgb: '#000000'
   time_limit: 1.0
-- id: bancdepoisson
+- id: artefact
   label: K
-  name: Banc de poisson
+  name: Artéfact
   rgb: '#000000'
-  time_limit: 1.0
-- id: abysses
+  time_limit: 1.5
+- id: wifi
   label: L
-  name: Abysses
+  name: Wifi
   rgb: '#000000'
   time_limit: 1.0
