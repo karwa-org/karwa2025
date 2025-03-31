@@ -11,8 +11,10 @@ This uses [Ragnar's awesome BAPCtools scripts](https://github.com/RagnarGrootKoe
 - Déroute Aquatique
 - Artéfacts
 - Lettre
+- Abysses
 - FiboFish
 ### Easy
+- Banc de poissons
 - Wifi
 - Caverne
 - Star

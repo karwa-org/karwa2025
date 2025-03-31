@@ -11,6 +11,6 @@ int main(int argc, char *argv[]) {
     long long n;
     in >> n;
 
-    v.read_integer("answer", 0, n-1);
+    v.read_integer("answer", 1, n);
     v.newline();
 }

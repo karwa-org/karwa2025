@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[]) {
     InputValidator v(argc, argv);
-    int n = v.read_integer("nbr_of_fish", 0, 1000);
+    int n = v.read_integer("nbr_of_fish", 1, 1000);
     v.newline();
 
     std::set<std::pair<long long, long long>> fish_positions;

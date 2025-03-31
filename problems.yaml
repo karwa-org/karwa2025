@@ -3,9 +3,9 @@
   name: Abysses
   rgb: '#000000'
   time_limit: 3.0
-- id: bancdepoisson
+- id: bancdepoissons
   label: B
-  name: Banc de poisson
+  name: Banc de poissons
   rgb: '#000000'
   time_limit: 1.0
 - id: caverne

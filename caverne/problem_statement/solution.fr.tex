@@ -1,8 +1,11 @@
 \begin{frame}
     \frametitle{\problemtitle}
+    \begin{block}{Problème}
+        Déterminer l'espace libre entre deux matrices (sol et plafond) de taille $l \times p$, avec une hauteur totale de $h$.
+    \end{block}
     \begin{itemize}
         \item<+-> Le volume total du parallélépipède rectangle est $h\times l\times p$
-        \item<+-> Le volume pris par la roche est la somme de chaque matrice, on a donc du $\mathcal{O}(l\cdot p)$.
+        \item<+-> Le volume pris par la roche est la somme de chaque matrice, on a donc $\mathcal{O}(l\cdot p)$.
         \item<+-> Pour éviter de dépasser la hauteur, il suffit de prendre le maximum entre la hauteur et la somme.
     \end{itemize}
     % \solvestats

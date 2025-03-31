@@ -4,7 +4,7 @@ problem_format_version: 2023-07-draft
 type: pass-fail
 name:
   #lang: name
-  fr: Banc de poisson
+  fr: Banc de poissons
 uuid: 8ee7605a-c080-843f-248e-16f3c52e0f18
 credits: Pedro Da Silva
 source:
