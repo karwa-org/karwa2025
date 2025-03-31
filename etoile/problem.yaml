@@ -3,7 +3,7 @@ problem_format_version: 2023-07-draft
 # 'pass-fail', 'interactive', 'multi-pass', or 'interactive multi-pass'
 type: pass-fail
 name:
-  fr: Star
+  fr: Étoile
 uuid: 8ee7605a-1495-86d0-2ae9-c8292ee4d602
 credits: Alexis Englebert
 source:
