@@ -2,7 +2,7 @@
   label: A
   name: Abysses
   rgb: '#000000'
-  time_limit: 1.0
+  time_limit: 3.0
 - id: bancdepoisson
   label: B
   name: Banc de poisson
@@ -38,9 +38,9 @@
   name: Second Sino-Japanese War
   rgb: '#000000'
   time_limit: 1.0
-- id: star
+- id: etoile
   label: I
-  name: Star
+  name: Étoile
   rgb: '#000000'
   time_limit: 1.0
 - id: lettre
