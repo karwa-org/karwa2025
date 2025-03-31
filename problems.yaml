@@ -48,3 +48,13 @@
   name: Lettre
   rgb: '#000000'
   time_limit: 1.0
+- id: bancdepoisson
+  label: K
+  name: Banc de poisson
+  rgb: '#000000'
+  time_limit: 1.0
+- id: abysses
+  label: L
+  name: Abysses
+  rgb: '#000000'
+  time_limit: 1.0

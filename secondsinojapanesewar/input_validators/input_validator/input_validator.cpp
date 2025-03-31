@@ -16,7 +16,6 @@ int main(int argc, char *argv[]) {
         int c = v.read_integer("candidate", 0, n-1);
         if (candidates[c]) {
             v.WA("Cannot have multiple candidate, they must be unique");
-            return 43;
         }
         candidates[c] = true;
         if(i != m-1) v.space();
@@ -32,7 +31,6 @@ int main(int argc, char *argv[]) {
 
         if(cnt[make_pair(u,vv)] || cnt[make_pair(vv,u)]) {
             v.WA("The graph must be simple, it is not a multigraph ! for edge: ", u, " and : ", vv);
-            return 43;
         }
         cnt[make_pair(u,vv)] = true;
         cnt[make_pair(vv,u)] = true;
@@ -40,6 +38,4 @@ int main(int argc, char *argv[]) {
         adj[vv].push_back(u);
         v.newline();
     }
-
-    return 0;
 }

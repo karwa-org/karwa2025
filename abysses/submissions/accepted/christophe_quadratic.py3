@@ -1,7 +1,7 @@
 import math
 
 def find_first_intersection(points, x0, y0, angle, eps=1e-6):
-    angle_rad = math.radians(angle + 90) # axis rotation of 90°
+    angle_rad = math.radians(angle) # axis rotation of 90°
     dx, dy = math.cos(angle_rad), math.sin(angle_rad)
 
     #print(f" >> debug : angle={angle_rad} : dx={dx} ; dy={dy}")
