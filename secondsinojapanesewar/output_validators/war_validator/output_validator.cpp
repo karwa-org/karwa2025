@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
     vector<int> contestant_sols;
     for(int i = 0; i < n_contestant_sol; i++){
         int contestant_city = v.read_integer("city", 0, 10000);
-        v.space();
+        if(i != n_contestant_sol-1) v.space();
         if (candidates[contestant_city] != true) {
             v.WA("The given city is not a candidate city. got :", contestant_city);
         }
