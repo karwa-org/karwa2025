@@ -1,36 +1,36 @@
-n, m, p = list(map(int, input().split()))
+from collections import deque
+n, m, p = map(int, input().split())
 candi = list(map(int, input().split()))
-adj = [set() for _ in range(n)] # set to delete double edges
+adj = [[] for _ in range(n)]
 for _ in range(p):
-    u, v = list(map(int, input().split()))
-    if u == v: continue # loops
-    adj[u].add(v)
-    adj[v].add(u)
+    u, v = map(int, input().split())
+    adj[u].append(v)
+    adj[v].append(u)
 
 def bfs(start, target):
-    queue, visited, dist = [(start,0)], {start}, 1e17
+    queue, visited, dist = [(start,0)], [False]*n, 1e17
+    visited[start] = True
     while queue:
         v, d = queue.pop()
         if v == target:
             dist = d
             break
         for u in adj[v]:
-            if u not in visited:
+            if not visited[u]:
                 queue.append((u,d+1))
-                visited.add(u)
+                visited[u] = True
     return dist
 
-max_dist, max_set = 1e18, set()
+max_dist, max_paths = int(1e18), []
 for v in candi:
+    found = False
     for u in adj[v]:
-        adj[u].remove(v) # remove u -> v
+        adj[u].remove(v)
         dist = bfs(u, v)
-        #print(f">> from {v} -> {u}, distance={dist}")
-        adj[u].add(v)
-
-        if dist == max_dist:
-            max_set.add(str(v))
+        adj[u].append(v)
+        if dist == max_dist and not found:
+            found = True
+            max_paths.append(v)
         elif dist < max_dist:
-            max_set = {str(v)}
-            max_dist = dist
-print(f'{len(max_set)}\n{" ".join(max_set)}')
+            max_paths, max_dist, found = [v], dist, True
+print(f'{len(max_paths)}\n{" ".join(map(str,max_paths))}')
