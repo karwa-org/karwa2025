@@ -4,7 +4,7 @@
         \begin{block}{Problème}
             On a $n$ poisson avec des directions, déterminer la taille du banc étant donné un poissoné donné.
         \end{block}
-        \item<+-> \textbf{Solution :} Étant donné un poisson $i$ on regarde quel poisson celui-ci redirige la lumière. On répète cette opération jusqu'a ce qu'il ne reste plus de poisson ou que le poisson pointe dans le vide. 
+        \item<+-> \textbf{Solution :} Étant donné un poisson $i$ on regarde quel poisson \textbf{le plus proche} celui-ci redirige la lumière. On répète cette opération jusqu'a ce qu'il ne reste plus de poisson ou que le poisson pointe dans le vide. 
         \item<+-> \textbf{Complexitée :} $\mathcal{O}(n^2)$.
         \item<+-> \textbf{Challenge :} Il y a moyen de le résoudre en $\mathcal{O}(n log n) ! $
     \end{itemize}
