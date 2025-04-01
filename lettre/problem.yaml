@@ -12,5 +12,5 @@ source:
   #url:
 license: cc by-sa
 rights_owner: author
-# limits:
-#   time_limit: 1.0
+limits:
+  time_limit: 1.0

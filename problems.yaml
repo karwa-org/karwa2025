@@ -12,7 +12,7 @@
   label: C
   name: Caverne
   rgb: '#000000'
-  time_limit: 1.0
+  time_limit: 1.5
 - id: derouteaquatique
   label: D
   name: Déroute Aquatique
@@ -37,7 +37,7 @@
   label: H
   name: Second Sino-Japanese War
   rgb: '#000000'
-  time_limit: 1.0
+  time_limit: 1.5
 - id: etoile
   label: I
   name: Étoile
@@ -47,7 +47,7 @@
   label: J
   name: Lettre
   rgb: '#000000'
-  time_limit: 1.0
+  time_limit: 1.5
 - id: artefact
   label: K
   name: Artéfact

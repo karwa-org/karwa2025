@@ -25,3 +25,4 @@ limits:
     ac_to_time_limit: 2
     # Warning for submissions within 50% of time limit
     time_limit_to_tle: 1.5
+  time_limit: 1.5
