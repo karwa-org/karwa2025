@@ -5,8 +5,9 @@
             Un graphe avec $n$ villes et $m$ villes candidates, trouver la ville candidate dont le cycle est le plus petit.
         \end{block}
         \item<+-> Solution Naïve : Tester tout les chemins possibles pour chaque ville $\mapsto$ Trop lent.
-        \item<+-> \textbf{Observation :} Une boucle peut s'exprimer comme une chemin de A à B et de B à A (en interdisant )
-        \item<+-> \textbf{Solution :} On fait un 0-1 bfs pour chaque ville candidate.
+        \item<+-> \textbf{Observation :} Une boucle peut s'exprimer comme deux chemins distincs de A à B et de A à B
+        \item<+-> \textbf{Solution :} On fait un 0-1 bfs pour chaque ville candidate, quand on rencotre un noeuds déjà visité on regarde si les deux chemins sont distincs. Si ils sont distincs alors c'est garantis que la solution est optimale au sinon on continue.
+        \item<+-> \textbf{Complexitée: } au plus $\mathcall{O}(n^2)$
     \end{itemize}
     \solvestats
 \end{frame}

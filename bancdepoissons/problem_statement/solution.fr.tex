@@ -1,10 +1,14 @@
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{itemize}
-        % TODO: Remove this comment when you're done writing the solutions.
-        \item<+-> \textbf{Problem:} Print $4\sqrt n$ with sufficiently many digits.
-        \item<+-> Naive solution: do something stupid. $\mathcal O(2^n)$ is too slow!
-        \item<+-> Instead, just compute the answer. $\mathcal O(1)$.
+        \begin{block}{Problème}
+            On a des poissons qui ont certain position et une vitesse, calculez le nombre de bancs
+        \end{block}
+        \item<+-> Solution Naïve : simuler le déplacement des poissons $\mapsto$ Trop lent.
+        \item<+-> \textbf{Observation :} On peut représenter la position des poissons à l'instant t via une fonction. 
+        \item<+-> \textbf{Solution :} On trie les poissons en fonction de leurs positions. On parcoure les poissons et regarde les intersections des fonctions, si il y en a une dans les temps alors ce poisson fait partis d'un banc ausinon ça veut dire que le banc atteint la target sans pertubation $\mapsto$ on ajoute +1 à la réponse. 
+        \item<+-> \textbf{Complexitée :} $\mathcal{O}(n log n)$
+
     \end{itemize}
     \solvestats
 \end{frame}
