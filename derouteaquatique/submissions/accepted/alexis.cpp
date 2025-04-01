@@ -75,10 +75,7 @@ void solve() {
             }
         }
     }
-    for(auto& i : dist) {
-        for(auto& k : i) cerr << k << " ";
-        cerr << endl;
-    }
+
     cout << dist[end.first][end.second] << endl;
 }
 
