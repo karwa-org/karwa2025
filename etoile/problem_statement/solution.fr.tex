@@ -1,10 +1,13 @@
 \begin{frame}
     \frametitle{\problemtitle}
     \begin{itemize}
-        % TODO: Remove this comment when you're done writing the solutions.
-        \item<+-> \textbf{Problem:} Print $4\sqrt n$ with sufficiently many digits.
-        \item<+-> Naive solution: do something stupid. $\mathcal O(2^n)$ is too slow!
-        \item<+-> Instead, just compute the answer. $\mathcal O(1)$.
+        \begin{block}{Problème}
+            On a $n$ bacs, déterminer la taille de l'étoile.
+        \end{block}
+        \item<+-> Solution Naïve : Générer l'étoile étape par étape $\mapsto$ Trop lent.
+        \item<+-> \textbf{Observation :} Le nombre de bacs nécéssaire pour une étoile peut s'exprimer comme $n^2 + (n-1)^2$ où n est la taille de l'étoile (centre compris).
+        \item<+-> \textbf{Solution :} Résoudre l'équation. $\mathcal{O}(1)$
+        \item<+-> \textbf{Solution alternative:} Faire un binary search sur la fonction. $\mathcal{O}(n log n)$
     \end{itemize}
     \solvestats
 \end{frame}
