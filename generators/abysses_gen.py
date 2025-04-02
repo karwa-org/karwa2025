@@ -7,7 +7,7 @@ getcontext().prec = 28
 
 TOLERANCE = Decimal("1e-5")  # tolerance for floating-point comparisons
 
-def generate_random_points(n, x_range, y_range, degree_range=(0, 360)):
+def generate_random_points(n, x_range, y_range, degree_range=(0, 359)):
     points = []
     for _ in range(n):
         # Generate coordinates as Decimals.
@@ -59,7 +59,7 @@ def generate_points_with_chain(n, x_range, y_range, k):
     # Build chain so that chain length equals exactly k.
     for i in range(1, k):
         # Pick a random angle (in degrees) for the chain link.
-        chosen_angle = random.randint(0, 360)
+        chosen_angle = random.randint(0, 359)
         # Choose a distance such that the next point stays within bounds.
         d_min = Decimal("1")
         d_max = Decimal(min(x_range[1] - x_range[0], y_range[1] - y_range[0])) / 10
@@ -84,7 +84,7 @@ def generate_points_with_chain(n, x_range, y_range, k):
     
     # For the last point in the chain, assign a random degree.
     last_point = points_chain[-1]
-    last_point = (last_point[0], last_point[1], random.randint(0, 360))
+    last_point = (last_point[0], last_point[1], random.randint(0, 359))
     points_chain[-1] = last_point
     
     print("Chain length:", len(points_chain), "Expected:", k)
@@ -124,15 +124,45 @@ def find_component_size_for_point(index, adj):
     visited = [False] * n
     return dfs(index, visited, adj)
 
+
+def solve(n, fishes, index_query):
+    in_group = [False] * n
+    in_group[index_query], found, target, size = True, True, fishes[index_query], 1
+    while found:
+        i = find_first_intersection(fishes, *target)
+        if i == -1 or in_group[i]:
+            found = False
+        else:
+            in_group[i], size, target = True, size+1, fishes[i]
+    return size
+
+def find_first_intersection(points, x0, y0, angle):
+    angle_rad = math.radians(angle)
+    dx, dy = Decimal(math.cos(angle_rad)), Decimal(math.sin(angle_rad))
+    index_closest, best_dist_squared = -1, float('inf')
+    for i in range(len(points)):
+        x,y,a = points[i]
+        if abs(x-x0) <= TOLERANCE and abs(y-y0) <= TOLERANCE: continue # same point
+        dist = dx*(y-y0) - dy*(x-x0) # dist between (x,y) and the beam
+        if abs(dist) <= TOLERANCE and (x-x0)*dx >= 0 and (y-y0)*dy >= 0:
+            dist_squared = (x-x0)**2 + (y-y0)**2 # dist between (x,y) and (x0,y0)
+            if dist_squared < best_dist_squared:
+                best_dist_squared, closest_point, index_closest = dist_squared, (x,y,a), i
+    return index_closest
+
+
 # Generate several test cases.
-for idx in range(10):
+for idx in range(10,15):
     # Example usage:
     n = 1000             # Total number of points
     x_range = (0, 10000000)
     y_range = (0, 10000000)
-    k = random.randint(1, 10)  # We want a chain (component) of size exactly k
+    k = random.randint(100,n)  # We want a chain (component) of size exactly k
 
     points = generate_points_with_chain(n, x_range, y_range, k)
+    starting_fish = points[0]
+    random.shuffle(points)
+    starting_idx = points.index(starting_fish)
     adj = build_adjacency_list(points)
 
     # Check the chain by computing the component size for each chain point.
@@ -151,7 +181,10 @@ for idx in range(10):
 
     # Compute answer (component size starting at point 0) using DFS.
     visited = [False] * n
-    ans = dfs(0, visited, adj)
+    ans = dfs(starting_idx, visited, adj)
+    ans2 = solve(n, points, starting_idx)
+    if ans != ans2:
+        print("not same answer...", ans, ans2)
     assert(len(points) == n)
 
     # Write test case to file.
@@ -160,6 +193,6 @@ for idx in range(10):
         for p in points:
             # Write Decimal values as strings.
             file.write(f"{p[0]} {p[1]} {p[2]}\n")
-        file.write("0\n")
+        file.write(f"{starting_idx}\n")
     with open(f"random-medium-{idx+1}.ans", "w") as file:
-        file.write(f"{ans}\n")
+        file.write(f"{ans2}\n")
