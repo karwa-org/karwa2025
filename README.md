@@ -66,7 +66,7 @@ Download [ICPC Tools Resolver and Client-Presentation](https://tools.icpc.global
 While the contest is running, get cool presentations on screens, e.g. to get scoreboard and clock, run:
 
 ```console
-./standalone.sh <domjudge URL>/api/contests <admin> <pwd> -p 72 13
+./standalone.sh <domjudge URL>/api/contests <admin> <pwd> -p 73 13
 ```
 
 For resolver at the end, run:
